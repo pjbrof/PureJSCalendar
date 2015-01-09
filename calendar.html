@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>PureJSCalendar</title>
+        <style>
+            #heading {
+                text-align: center;
+                font-size:24px;
+            }
+            /* Styling for the footer */
+             div.footer {
+                text-align: center;
+            }
+            /* Styling for the overall table */
+             table {
+                table-layout: fixed;
+                border-collapse: collapse;
+                width: 75%;
+                margin: 0 auto;
+                /*border-collapse: separate;
+                empty-cells: hide;*/
+            }
+            .title {
+                font-weight:bold;
+                font-size:x-large;
+            }
+            /* Styling for the column headers (days of the week) */
+             th {
+                padding: 0 0.5em;
+                text-align: center;
+                background-color:black;
+                color:white;
+            }
+            /* Styling for the individual cells (days) */
+             td {
+                font-size: medium;
+                padding: 0.25em 0.25em;
+                width: 14%;
+                height: 80px;
+                text-align: left;
+                vertical-align: top;
+            }
+            /* Styling for the date numbers */
+             .date {
+                font-size: large;
+                padding: 0.25em 0.25em;
+                text-align: left;
+                vertical-align: top;
+            }
+            td:hover {
+                background-color:lightgray;
+            }
+        </style>
+        <script type="text/javascript">
+            d = new Date();
+
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+
+            var n = month[d.getMonth()];
+
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            var w = weekday[d.getDay()];
+
+            var y = d.getFullYear();
+
+            document.getElementById("month").innerHTML = n;
+            document.getElementById("year").innerHTML = y;
+
+            dayofwk = new Date('1 ' + n + y);
+
+            var q = dayofwk.getDay();
+
+            /* 30 - September April June November 
+            29 - Febuary */
+            if (n == 'Febuary') {
+                limit = 29;
+            } else if (n == 'September' || n == 'April' || n == 'June' || n == 'November') {
+                limit = 30;
+            } else {
+                limit = 31;
+            }
+
+            for (i = 1; i <= limit; i++) {
+                j = q + i;
+                document.getElementById(j).innerHTML = [i];
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label for="month">Month:</label>
+            <select name="month">
+                <option>January</option>
+                <option>Febuary</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>Semptember</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+            <label for="year">Year:</label>
+            <select name="year">
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+            </select>
+        </div>
+        <div id="heading"> 
+            <span id="month"></span>
+            <span id="year"></span>
+        </div>
+        <table border="1">
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+                <td id="7"></td>
+            </tr>
+            <tr>
+                <td id="8"></td>
+                <td id="9"></td>
+                <td id="10"></td>
+                <td id="11"></td>
+                <td id="12"></td>
+                <td id="13"></td>
+                <td id="14"></td>
+            </tr>
+            <tr>
+                <td id="15"></td>
+                <td id="16"></td>
+                <td id="17"></td>
+                <td id="18"></td>
+                <td id="19"></td>
+                <td id="20"></td>
+                <td id="21"></td>
+            </tr>
+            <tr>
+                <td id="22"></td>
+                <td id="23"></td>
+                <td id="24"></td>
+                <td id="25"></td>
+                <td id="26"></td>
+                <td id="27"></td>
+                <td id="28"></td>
+            </tr>
+            <tr>
+                <td id="29"></td>
+                <td id="30"></td>
+                <td id="31"></td>
+                <td id="32"></td>
+                <td id="33"></td>
+                <td id="34"></td>
+                <td id="35"></td>
+            </tr>
+            <tr>
+                <td id="36"></td>
+                <td id="37"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div>
+            <form>
+                <h2>Add an Event</h2>
+                <label for="event">Event Title:</label>
+                <input name="event" type="text">
+                <br/>
+                <br/>
+                <label for="startdate">Start Date:</label>
+                <input name="startdate" type="date">
+                <label for="starttime">Start Time:</label>
+                <input name="starttime" type="time">
+                <br/>
+                <br/>
+                <label for="enddate">End Date:</label>
+                <input name="enddate" type="date">
+                <label for="endtime">End Time:</label>
+                <input name="endtime" type="time">
+                <br/>
+                <br/>
+                <label for="loc">Location:</label>
+                <input name="loc" type="text">
+                <br/>
+                <br/>
+                <label for="desc">Description:</label>
+                <textarea name="desc" rows="4" cols="50"></textarea>
+                <br/>
+                <br/>
+                <input type="button" name="submit" value="Submit" />
+            </form>
+        </div>
+    </body>
+</html>
