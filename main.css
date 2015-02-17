@@ -1,0 +1,66 @@
+#heading {
+    text-align: center;
+    font-size:24px;
+}
+/* Styling for the footer */
+ div.footer {
+    text-align: center;
+}
+/* Styling for the overall table */
+ table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 75%;
+    margin: 0 auto;
+    /*border-collapse: separate;
+    empty-cells: hide;*/
+}
+.title {
+    font-weight:bold;
+    font-size:x-large;
+}
+/* Styling for the column headers (days of the week) */
+ th {
+    padding: 0 0.5em;
+    text-align: center;
+    background-color:black;
+    color:white;
+}
+/* Styling for the individual cells (days) */
+ td {
+    font-size: medium;
+    /*padding: 0.25em 0.25em;*/
+    padding: 0;
+    width: 14%;
+    height: 80px;
+    text-align: left;
+    vertical-align: top;
+}
+/* Styling for the date numbers */
+ .date {
+    font-size: large;
+    padding: 0.25em 0.25em;
+    text-align: left;
+    vertical-align: top;
+}
+td:hover {
+    /*background-color:lightgray;*/
+}
+/* Styling for events */
+.event{
+    background-color:red;
+    height:12.5px;
+    font-size: x-small;
+    display: block;
+    width: auto;
+    -moz-border-radius:2px;
+    border-radius: 2px;
+    padding-left: 5px;
+    color:white;
+}
+.event:hover{
+    opacity: 0.6;
+}
+.blue{
+    background-color: blue;
+}
