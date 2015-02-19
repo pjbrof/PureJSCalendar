@@ -61,8 +61,10 @@ window.onload = function(){
         j = q + i;
         document.getElementById(j).innerHTML = [i];
     }
+    
+    //TODO (difficult): Show the dates for the next and previous month in a light gray numbering
     if(j <= 35){
-        document.getElementById('lastrow').style.visibility = "hidden";
+        document.getElementById('lastrow').style.display = "none";
     }
 
     today = d.getDate();
@@ -85,7 +87,7 @@ function changeMonth(){
         28 - February 
         Leap year every 4 years
     */
-    if (n == 'February') {
+    if (x == 'February') {
         var leap = (y /= 4); 
         if(leap % 1 === 0){
             limit = 29;
@@ -108,12 +110,12 @@ function changeMonth(){
         document.getElementById(j).innerHTML = [i];
     }
 
-    //TODO: hide every id less than j instead of removing the last row remove all not in use. Leading month days can stay.
+    //TODO (difficult): Show the dates for the next and previous month in a light gray numbering
     if(j <= 35){
-        document.getElementById('lastrow').style.visibility = "hidden";
+        document.getElementById('lastrow').style.display = "none";
     }
     else{
-        document.getElementById('lastrow').style.visibility = "visible";
+        document.getElementById('lastrow').style.display = "table-row";
     }
 
     var monh = new Array();
@@ -183,12 +185,12 @@ function changeYear(){
         document.getElementById(j).innerHTML = [i];
     }
 
-    //TODO: hide every id less than j instead of removing the last row remove all not in use. Leading month days can stay.
+    //TODO (difficult): Show the dates for the next and previous month in a light gray numbering
     if(j <= 35){
-        document.getElementById('lastrow').style.visibility = "hidden";
+        document.getElementById('lastrow').style.display = "none";
     }
     else{
-        document.getElementById('lastrow').style.visibility = "visible";
+        document.getElementById('lastrow').style.display = "table-row";
     }
 
     var monh = new Array();
