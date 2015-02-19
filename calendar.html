@@ -7,103 +7,105 @@
         <script src="app.js"></script>  
     </head>
     <body>
-        <div>
-            <label for="month">Month:</label>
-            <select id="mon" name="month" onchange="javascript:changeMonth()">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">Semptember</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
-            <label for="year">Year:</label>
-            <select name="year">
-                <option>2015</option>
-                <option>2016</option>
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option>2020</option>
-            </select>
+        <div class="leftcol">
+            <div>
+                <label for="month">Month:</label>
+                <select id="mon" name="month" onchange="javascript:changeMonth()">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">Semptember</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <label for="year">Year:</label>
+                <select id="yr" name="year" onchange="javascript:changeYear()">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div id="heading"> 
+                <span id="month"></span>
+                <span id="year"></span>
+            </div>
+            <br/>
+            <table border="1">
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+                <tr>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                    <td id="4"></td>
+                    <td id="5"></td>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                </tr>
+                <tr>
+                    <td id="8"></td>
+                    <td id="9"></td>
+                    <td id="10"></td>
+                    <td id="11"></td>
+                    <td id="12"></td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                </tr>
+                <tr>
+                    <td id="15"></td>
+                    <td id="16"></td>
+                    <td id="17"></td>
+                    <td id="18"></td>
+                    <td id="19"></td>
+                    <td id="20"></td>
+                    <td id="21"></td>
+                </tr>
+                <tr>
+                    <td id="22"></td>
+                    <td id="23"></td> 
+                    <td id="24"></td>
+                    <td id="25"></td>
+                    <td id="26"></td>
+                    <td id="27"></td>
+                    <td id="28"></td>
+                </tr>
+                <tr>
+                    <td id="29"></td>
+                    <td id="30"></td>
+                    <td id="31"></td>
+                    <td id="32"></td>
+                    <td id="33"></td>
+                    <td id="34"></td>
+                    <td id="35"></td>
+                </tr>
+                <tr id="lastrow">
+                    <td id="36"></td>
+                    <td id="37"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
-        <div id="heading"> 
-            <span id="month"></span>
-            <span id="year"></span>
-        </div>
-        <br/>
-        <table border="1">
-            <tr>
-                <th>Sunday</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-            </tr>
-            <tr>
-                <td id="1"></td>
-                <td id="2"></td>
-                <td id="3"></td>
-                <td id="4"></td>
-                <td id="5"></td>
-                <td id="6"></td>
-                <td id="7"></td>
-            </tr>
-            <tr>
-                <td id="8"></td>
-                <td id="9"></td>
-                <td id="10"></td>
-                <td id="11"></td>
-                <td id="12"></td>
-                <td id="13"></td>
-                <td id="14"></td>
-            </tr>
-            <tr>
-                <td id="15"></td>
-                <td id="16"></td>
-                <td id="17"></td>
-                <td id="18"></td>
-                <td id="19"></td>
-                <td id="20"></td>
-                <td id="21"></td>
-            </tr>
-            <tr>
-                <td id="22"></td>
-                <td id="23"></td> 
-                <td id="24"></td>
-                <td id="25"></td>
-                <td id="26"></td>
-                <td id="27"></td>
-                <td id="28"></td>
-            </tr>
-            <tr>
-                <td id="29"></td>
-                <td id="30"></td>
-                <td id="31"></td>
-                <td id="32"></td>
-                <td id="33"></td>
-                <td id="34"></td>
-                <td id="35"></td>
-            </tr>
-            <tr>
-                <td id="36"></td>
-                <td id="37"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <!--<div>
+        <div class="rightcol">
             <form>
                 <h2>Add an Event</h2>
                 <label for="event">Event Title:</label>
@@ -132,6 +134,6 @@
                 <br/>
                 <input type="button" name="submit" value="Submit" />
             </form>
-        </div> -->
+        </div>
     </body>
 </html>

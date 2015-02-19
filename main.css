@@ -1,3 +1,13 @@
+.leftcol{
+    height:100%;
+    width:80%;
+    float:left;
+}
+.rightcol{
+    height:100%;
+    width:20%;
+    float: left;
+}
 #heading {
     text-align: center;
     font-size:24px;
@@ -29,7 +39,7 @@
 /* Styling for the individual cells (days) */
  td {
     font-size: medium;
-    /*padding: 0.25em 0.25em;*/
+    padding: 0.25em 0.25em;*/
     padding: 0;
     width: 14%;
     height: 80px;
@@ -44,7 +54,7 @@
     vertical-align: top;
 }
 td:hover {
-    /*background-color:lightgray;*/
+    background-color:#F0F0F0;
 }
 /* Styling for events */
 .event{
