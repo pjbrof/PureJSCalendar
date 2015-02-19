@@ -66,7 +66,7 @@ window.onload = function(){
     document.getElementById(today).style.backgroundColor = "lightgray";
 }
 
-/*function changeMonth(){
+function changeMonth(){
     var x = document.getElementById("mon").value;
     document.getElementById("month").innerHTML = x;
 
@@ -77,7 +77,7 @@ window.onload = function(){
     var q = dayofwk.getDay();
 
     /* 30 - September April June November 
-    29 - Febuary 
+    29 - Febuary  */
     if (x == 'February') {
         // Need to add multiples of 2016 - (use modulus?)
         if(y == 2016){
@@ -100,4 +100,14 @@ window.onload = function(){
         j = q + i;
         document.getElementById(j).innerHTML = [i];
     }
-}*/
+
+    today = d.getDate();
+    var n = month[d.getMonth()];
+    var x = document.getElementById("mon").value;
+    if(n == x){
+        document.getElementById(today).style.backgroundColor = "lightgray";
+    }
+    else{
+        document.getElementById(today).style.backgroundColor = "white";   
+    }
+}
