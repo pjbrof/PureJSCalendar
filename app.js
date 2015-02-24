@@ -1,5 +1,6 @@
 window.onload = function(){
 
+    // Code for days and months to be moved into seperate js file. Will leave stable code up and running until testing is confirmed.
     d = new Date();
 
     var month = new Array();
