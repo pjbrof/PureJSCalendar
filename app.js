@@ -12,25 +12,18 @@ window.onload = function(){
     if(j <= 35){
         document.getElementById('lastrow').style.display = "none";
     }
-    
-    document.getElementById(today).style.backgroundColor = "lightgray";
+
+    document.getElementById(today).parentNode.style.backgroundColor = "lightgray";
 }
 
 function changeMonth(){
 
-    /*var x = document.getElementById("mon").value;
+    var x = document.getElementById("mon").value;
     document.getElementById("month").innerHTML = x;
-
-    var y = d.getFullYear();
 
     dayofwk = new Date('1 ' + x + y);
 
     var q = dayofwk.getDay();
-
-    /*  
-        30 - September April June November 
-        28 - February 
-        Leap year every 4 years
     
     if (x == 'February') {
         var leap = (y /= 4); 
@@ -63,40 +56,21 @@ function changeMonth(){
         document.getElementById('lastrow').style.display = "table-row";
     }
 
-    var monh = new Array();
-    monh[0] = "January";
-    monh[1] = "February";
-    monh[2] = "March";
-    monh[3] = "April";
-    monh[4] = "May";
-    monh[5] = "June";
-    monh[6] = "July";
-    monh[7] = "August";
-    monh[8] = "September";
-    monh[9] = "October";
-    monh[10] = "November";
-    monh[11] = "December";
-
-    var t = monh[d.getMonth()];
-
-    today = d.getDate();
-    if(t == x){
-        document.getElementById(today).style.backgroundColor = "lightgray";
+    if(m == x){
+        document.getElementById(today).parentNode.style.backgroundColor = "lightgray";
     }
     else{
-        document.getElementById(today).style.backgroundColor = "white";
-    }*/
+        document.getElementById(today).parentNode.style.backgroundColor = "white";
+    }
 }
 
 function changeYear(){
 
-    /*var p = document.getElementById("mon").value;
+    var p = document.getElementById("mon").value;
     document.getElementById("month").innerHTML = p;
 
     var x = document.getElementById("yr").value;
     document.getElementById("year").innerHTML = x;
-
-    var y = d.getFullYear();
 
     dayofwk = new Date('1 ' + p + x);
 
@@ -106,7 +80,8 @@ function changeYear(){
         30 - September April June November 
         28 - February 
         Leap year every 4 years
-    
+    */
+
     if (p == 'February') {
         var leap = (x /= 4); 
         if(leap % 1 === 0){
@@ -138,27 +113,10 @@ function changeYear(){
         document.getElementById('lastrow').style.display = "table-row";
     }
 
-    var monh = new Array();
-    monh[0] = "January";
-    monh[1] = "February";
-    monh[2] = "March";
-    monh[3] = "April";
-    monh[4] = "May";
-    monh[5] = "June";
-    monh[6] = "July";
-    monh[7] = "August";
-    monh[8] = "September";
-    monh[9] = "October";
-    monh[10] = "November";
-    monh[11] = "December";
-
-    var t = monh[d.getMonth()];
-
-    today = d.getDate();
-    if(t == p && x == y){
-        document.getElementById(today).style.backgroundColor = "lightgray";
+    if(m == p && x == y){
+        document.getElementById(today).parentNode.style.backgroundColor = "lightgray";
     }
     else{
-        document.getElementById(today).style.backgroundColor = "white";
-    }*/
+        document.getElementById(today).parentNode.style.backgroundColor = "white";
+    }
 }
