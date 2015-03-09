@@ -23,6 +23,7 @@
     month[10] = "November";
     month[11] = "December";
 
+    // Month format full name
     var m = month[date.getMonth()];
 
     var weekday = new Array(7);
@@ -34,13 +35,13 @@
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
+    // Weekday format full name
     var w = weekday[date.getDay()];
 
+    // Year format XXXX
     var y = date.getFullYear();
 
-    var q = dayofwk.getDay();
-
-    dayofwk = new Date('1 ' + n + y);
+    dayofwk = new Date('1 ' + m + y);
 
     var q = dayofwk.getDay();
 
@@ -49,7 +50,7 @@
     	28 - February 
     	Leap year every 4 years
     */
-    if (n == 'February') {
+    if (m == 'February') {
         var leap = (y /= 4); 
         if(leap % 1 === 0){
             limit = 29;
@@ -57,13 +58,10 @@
         else{
         	limit = 28;
         }
-    } else if (n == 'September' || n == 'April' || n == 'June' || n == 'November') {
+    } else if (m == 'September' || m == 'April' || m == 'June' || m == 'November') {
         limit = 30;
     } else {
         limit = 31;
     }
 
-    for (i = 1; i <= limit; i++) {
-        j = q + i;
-        document.getElementById(j).innerHTML = [i];
-    }
+    today = date.getDate();
