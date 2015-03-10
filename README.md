@@ -10,3 +10,5 @@ Update 2/18: Code is super sloppy right now, but the month selection and year se
 Update 2/23: Transfering code to individual files for tidyness. Handlers for days, month, and year will be moved to dateHandler and then called upon from app.js functions. Code is to remain intact until reliable testing can be done.
 
 Update 3/2: Once date handlers are in place which I'm currently working on I will make a more comprehensive readme with instructions.
+
+Update 3/9: Created mini version using only css all functionality will remain in js handlers. Made minor fixes to main.css

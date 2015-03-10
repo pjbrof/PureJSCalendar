@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>PureJSCalendar</title>
+        
+        <link rel="stylesheet" href="mini.css" />
+        <script src="app.js"></script>  
+        <script src="dateHandler.js"></script>
+    </head>
+    <body>
+        <div class="">
+            <div>
+                <label for="month">Month:</label>
+                <select id="mon" name="month" onchange="javascript:changeMonth()">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">Semptember</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <label for="year">Year:</label>
+                <select id="yr" name="year" onchange="javascript:changeYear()">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div id="heading"> 
+                <span id="month"></span>
+                <span id="year"></span>
+            </div>
+            <br/>
+            <table border="1">
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wed</th>
+                    <th>Thur</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="1"></span>
+                    </td>
+                    <td>
+                        <span id="2"></span>
+                    </td>
+                    <td>
+                        <span id="3"></span>
+                    </td>
+                    <td>
+                        <span id="4"></span>
+                    </td>
+                    <td>
+                        <span id="5"></span>
+                    </td>
+                    <td>
+                        <span id="6"></span>
+                    </td>
+                    <td>
+                        <span id="7"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="8"></span>
+                    </td>
+                    <td>
+                        <span id="9"></span>
+                    </td>
+                    <td>
+                        <span id="10"></span>
+                    </td>
+                    <td>
+                        <span id="11"></span>
+                    </td>
+                    <td>
+                        <span id="12"></span>
+                    </td>
+                    <td>
+                        <span id="13"></span>
+                    </td>
+                    <td>
+                        <span id="14"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="15"></span>
+                    </td>
+                    <td>
+                        <span id="16"></span>
+                    </td>
+                    <td>
+                        <span id="17"></span>
+                    </td>
+                    <td>
+                        <span id="18"></span>
+                    </td>
+                    <td>
+                        <span id="19"></span>
+                    </td>
+                    <td>
+                        <span id="20"></span>
+                    </td>
+                    <td>
+                        <span id="21"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="22"></span>
+                    </td>
+                    <td>
+                        <span id="23"></span>
+                    </td>
+                    <td>
+                        <span id="24"></span>
+                    </td>
+                    <td>
+                        <span id="25"></span>
+                    </td>
+                    <td>
+                        <span id="26"></span>
+                    </td>
+                    <td>
+                        <span id="27"></span>
+                    </td>
+                    <td>
+                        <span id="28"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="29"></span>
+                    </td>
+                    <td>
+                        <span id="30"></span>
+                    </td>
+                    <td>
+                        <span id="31"></span>
+                    </td>
+                    <td>
+                        <span id="32"></span>
+                    </td>
+                    <td>
+                        <span id="33"></span>
+                    </td>
+                    <td>
+                        <span id="34"></span>
+                    </td>
+                    <td>
+                        <span id="35"></span>
+                    </td>
+
+                </tr>
+                <tr id="lastrow">
+                    <td>
+                        <span id="36"></span>
+                    </td>
+                    <td>
+                        <span id="37"></span>
+                    </td>
+                    <td>
+                        <span id="38"></span>
+                    </td>
+                    <td>
+                        <span id="39"></span>
+                    </td>
+                    <td>
+                        <span id="40"></span>
+                    </td>
+                    <td>
+                        <span id="41"></span>
+                    </td>
+                    <td>
+                        <span id="42"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="rightcol">
+            <form>
+                <h2>Add an Event</h2>
+                <label for="event">Event Title:</label>
+                <input name="event" type="text">
+                <br/>
+                <br/>
+                <label for="startdate">Start Date:</label>
+                <input name="startdate" type="date">
+                <label for="starttime">Start Time:</label>
+                <input name="starttime" type="time">
+                <br/>
+                <br/>
+                <label for="enddate">End Date:</label>
+                <input name="enddate" type="date">
+                <label for="endtime">End Time:</label>
+                <input name="endtime" type="time">
+                <br/>
+                <br/>
+                <label for="loc">Location:</label>
+                <input name="loc" type="text">
+                <br/>
+                <br/>
+                <label for="desc">Description:</label>
+                <textarea name="desc" rows="4" cols="50"></textarea>
+                <br/>
+                <br/>
+                <input type="button" name="submit" value="Submit" />
+            </form>
+        </div> -->
+    </body>
+</html>

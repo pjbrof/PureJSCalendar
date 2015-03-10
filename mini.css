@@ -1,16 +1,6 @@
-.leftcol{
-    height:100%;
-    width:80%;
-    float:left;
-}
-.rightcol{
-    height:100%;
-    width:20%;
-    float: left;
-}
 #heading {
     text-align: center;
-    font-size:24px;
+    font-size:12px;
 }
 /* Styling for the footer */
  div.footer {
@@ -20,14 +10,14 @@
  table {
     table-layout: fixed;
     border-collapse: collapse;
-    width: 75%;
+    /*width: 75%;*/
     margin: 0 auto;
     /*border-collapse: separate;
     empty-cells: hide;*/
 }
 .title {
     font-weight:bold;
-    font-size:x-large;
+    font-size:x-small;
 }
 /* Styling for the column headers (days of the week) */
  th {
@@ -35,23 +25,20 @@
     text-align: center;
     background-color:lightgray;
     color:black;
+    font-size: xx-small;
 }
 /* Styling for the individual cells (days) */
  td {
-    font-size: medium;
-    padding: 0.25em 0.25em;*/
+    font-size: small;
     padding: 0;
-    width: 14%;
-    height: 80px;
-    text-align: left;
-    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
 /* Styling for the date numbers */
  .date {
-    font-size: large;
-    padding: 0.25em 0.25em;
-    text-align: left;
-    vertical-align: top;
+    font-size: small;
+    text-align: center;
 }
 td:hover {
     background-color:#F0F0F0!important;
