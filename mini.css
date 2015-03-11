@@ -1,17 +1,16 @@
+.minicontainer{
+    width:184px;
+}
 #heading {
     text-align: center;
     font-size:12px;
-}
-/* Styling for the footer */
- div.footer {
-    text-align: center;
 }
 /* Styling for the overall table */
  table {
     table-layout: fixed;
     border-collapse: collapse;
     /*width: 75%;*/
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     /*border-collapse: separate;
     empty-cells: hide;*/
 }
@@ -42,6 +41,7 @@
 }
 td:hover {
     background-color:#F0F0F0!important;
+    cursor: default;
 }
 /* Styling for events */
 .event{
@@ -60,4 +60,17 @@ td:hover {
 }
 .blue{
     background-color: blue;
+}
+.arrow{
+    padding: 10px 15px 10px 15px;
+}
+.but{
+    text-decoration: none;
+    border: 1px solid black;
+    width: 30px;
+    height:20px;
+    color:black;
+}
+.but:hover{
+    background-color: #F0F0F0;
 }
