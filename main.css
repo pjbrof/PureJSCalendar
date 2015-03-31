@@ -22,6 +22,7 @@
     border-collapse: collapse;
     width: 75%;
     margin: 0 auto;
+    border:1px solid black;
     /*border-collapse: separate;
     empty-cells: hide;*/
 }
@@ -35,6 +36,7 @@
     text-align: center;
     background-color:lightgray;
     color:black;
+    border:1px solid black;
 }
 /* Styling for the individual cells (days) */
  td {
@@ -45,6 +47,7 @@
     height: 80px;
     text-align: left;
     vertical-align: top;
+    border:1px solid black;
 }
 /* Styling for the date numbers */
  .date {

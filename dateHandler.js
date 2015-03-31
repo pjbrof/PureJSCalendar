@@ -49,7 +49,7 @@
     	30 - September April June November 
     	28 - February 
     	Leap year every 4 years
-    */
+    
     if (m == 'February') {
         var leap = (y /= 4); 
         if(leap % 1 === 0){
@@ -62,6 +62,27 @@
         limit = 30;
     } else {
         limit = 31;
-    }
+    }*/
 
     today = date.getDate();
+
+    function getMonth(month, year){
+        /*  
+        30 - September April June November 
+        28 - February 
+        Leap year every 4 years
+        */
+        if (month == 'February') {
+            var leap = (year /= 4); 
+            if(leap % 1 === 0){
+                limit = 29;
+            }
+            else{
+                limit = 28;
+            }
+        } else if (month == 'September' || month == 'April' || month == 'June' || month == 'November') {
+            limit = 30;
+        } else {
+            limit = 31;
+        }
+    }

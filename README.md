@@ -12,3 +12,5 @@ Update 2/23: Transfering code to individual files for tidyness. Handlers for day
 Update 3/2: Once date handlers are in place which I'm currently working on I will make a more comprehensive readme with instructions.
 
 Update 3/9: Created mini version using only css all functionality will remain in js handlers. Made minor fixes to main.css
+
+Update 3/30: Everything is a little screwed up right now. I have some time tonight and this weekend to work on this project and clean everything up. The goal for Sunday, which I started tonight is to have the framework for the calendar up. I just started working on appending the html to the body in javascript. Eventually it will only require a div and the javascript library added to the head. I will work this weekend on cleaning up the Readme, directions, and condense all of this scattered nonsense. An up-to-date demo is also coming! I hate repos without examples so I'm kind of the hipocrite here.
