@@ -1,0 +1,29 @@
+{
+  "name": "purejscalendar",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjbrof/PureJSCalendar.git"
+  },
+  "keywords": [
+    "lightweight",
+    "vanillajs",
+    "calendar"
+  ],
+  "author": "Patrick Brophy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjbrof/PureJSCalendar/issues"
+  },
+  "homepage": "https://github.com/pjbrof/PureJSCalendar#readme",
+  "devDependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
